@@ -3,6 +3,8 @@
   --dark-fill-color: #2f303a;
   --accent-color: #2196f3;
   --secondary-fill-color: #f5f4fa;
+  --hero-fill-color: #C4C4C4;
+  --hero-gradient-color: rgba(47, 48, 58, 0.4);
   --hero-btn-active-color: #188CE8;
   --logo-dark-color: #000000;
   --logo-light-color: #ffffff;
@@ -12,6 +14,9 @@
   --bottom-contacts-color: rgba(255, 255, 255, 0.6);
   --header-border-color: #ececec;
   --portfolio-border-color: #EEEEEE;
+  --icon-color: #AFB1B8;
+  --footer-icon-fill-color: rgba(255, 255, 255, 0.1);
+
   --main-font: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -137,11 +142,18 @@ img {
 }
 
 .contact-link {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
+
 }
 
 .contact-item + .contact-item {
   margin-left: 50px;
+}
+
+.contact-icon {
+  margin-right: 10px;
 }
 
 
@@ -149,13 +161,20 @@ img {
 
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--dark-fill-color);
+
+  background-color: var(--hero-fill-color);
+  background-image: linear-gradient(var(--hero-gradient-color), var(--hero-gradient-color)),
+  url("../images/hero-bgr.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   
-  letter-spacing: 0.06em;
+  
 }
 
 .hero-content {
 text-align: center;
+
 max-width: 696px;
 margin-left: auto;
 margin-right: auto;
@@ -231,6 +250,13 @@ margin-right: auto;
 .features-item:not(:first-child) {
   margin-left: 30px;
 }
+
+.icon-wrapper {
+ background-color: var(--secondary-fill-color);
+ padding: 25px 100px;
+ margin-bottom: 30px;
+}
+
 .features-title {
   margin-bottom: 10px;
 
@@ -318,6 +344,23 @@ margin-right: auto;
   padding-bottom: 30px;
 }
 
+.team-sns {
+  display: flex;
+}
+
+.team-link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: teal;
+}
+
+.clients-list {
+  display: flex;
+}
+
 .footer {
   background-color: var(--dark-fill-color);
   padding-top: 60px;
@@ -359,6 +402,15 @@ margin-right: auto;
 .address-action:focus
  {
   color: var(--accent-color);
+}
+
+.footer .features-title {
+  margin-bottom: 0;
+  color: var(--light-text-color);
+}
+
+.sns-list {
+  display: flex;
 }
 
 /* Стилізація сторінки "Портфоліо" */
