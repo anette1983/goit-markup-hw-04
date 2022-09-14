@@ -155,13 +155,19 @@ img {
 
 .contact-icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 
 .hero {
 
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
 
   background-color: var(--hero-fill-color);
   background-image: linear-gradient(var(--hero-gradient-color), var(--hero-gradient-color)),
@@ -170,20 +176,14 @@ img {
   background-position: center;
   background-size: cover;
   
-  
-}
-
-.hero-content {
-text-align: center;
-
-max-width: 696px;
-margin-left: auto;
-margin-right: auto;
 }
 
 .hero-text {
   
   margin-bottom: 30px;
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
 
   font-weight: 900;
   font-size: 44px;
